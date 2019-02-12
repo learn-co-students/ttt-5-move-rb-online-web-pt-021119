@@ -1,3 +1,5 @@
+require "pry"
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,3 +9,12 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(move)
+   index = move.to_i - 1
+   index
+end
+def move(board, index, player = "X")
+  
+ board[index] = player
+
+end
