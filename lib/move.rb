@@ -7,3 +7,12 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(x)
+  x.to_i - 1
+
+end
+
+def move(board,space,letter = "X")
+  board.map!.with_index {|x,i| i == space ? letter : x}
+
+end
