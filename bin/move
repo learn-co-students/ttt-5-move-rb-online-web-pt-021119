@@ -1,5 +1,18 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
+require 'pry'
 
-# Code your CLI Here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+puts  "Welcome to Tic Tac Toe!"
+while !board.empty?
+  puts "Enter a number between 1-9:"
+  user_input = gets.strip
+  #binding.pry
+  index = input_to_index(user_input)
+  move(board, index)
+  display_board(board)
+  if user_input == "exit"
+    break
+  end
+end
